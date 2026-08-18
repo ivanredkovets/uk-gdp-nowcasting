@@ -55,7 +55,6 @@ A gap in the Moneycontrol historical series between May 2012 and February 2013 w
 
 - Naive forecast
 - Autoregression (AR)
-- Activity-based OLS regression
 - Ridge regression
 
 ### Machine Learning
