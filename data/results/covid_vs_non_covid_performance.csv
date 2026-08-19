@@ -1,0 +1,12 @@
+model_label,Full Sample,COVID,Non-COVID
+Ridge M3,3.929,8.362,0.639
+Gradient Boosting M3,4.266,9.109,0.581
+Ridge M2,4.388,9.399,0.437
+Ridge M1,4.579,9.825,0.347
+Random Forest M3,4.619,9.901,0.424
+Random Forest M2,5.18,10.835,1.359
+Gradient Boosting M2,5.352,11.226,1.336
+Random Forest M1,6.298,13.172,1.657
+Gradient Boosting M1,6.689,14.285,0.886
+Naive,7.374,15.844,0.368
+AR(1),11.434,24.578,0.388

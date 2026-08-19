@@ -1,0 +1,12 @@
+model_label,RMSE,MAE,DA,OOS_R2
+Ridge M3,3.929,1.72,73,71.6
+Gradient Boosting M3,4.266,1.634,78.4,66.5
+Ridge M2,4.388,1.606,81.1,64.6
+Ridge M1,4.579,1.655,64.9,61.4
+Random Forest M3,4.619,1.556,75.7,60.8
+Random Forest M2,5.18,1.998,70.3,50.7
+Gradient Boosting M2,5.352,2.02,70.3,47.3
+Random Forest M1,6.298,2.591,70.3,27.1
+Gradient Boosting M1,6.689,2.437,70.3,17.7
+Naive,7.374,2.627,78.4,0
+AR(1),11.434,3.225,75.7,-140.4
