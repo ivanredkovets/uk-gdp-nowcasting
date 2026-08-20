@@ -78,7 +78,7 @@ Ridge M3 achieves the strongest overall performance by RMSE, with an RMSE of **3
 
 Gradient Boosting M3 achieves an RMSE of **4.266**, while Random Forest M3 records the lowest MAE of **1.556**.
 
-Forecast performance generally improves as additional within-quarter information becomes available. This pattern is particularly clear for the nonlinear machine-learning models, with both Random Forest and Gradient Boosting improving substantially between M1 and M3.
+Forecast performance improves from M1 to M3 across all three model families, providing consistent evidence that additional within-quarter information improves GDP nowcasts. The gains are particularly large for Random Forest and Gradient Boosting.
 
 The results therefore provide evidence that richer within-quarter information improves GDP nowcasts. However, the machine-learning models do not consistently outperform Ridge regression, suggesting that a relatively simple regularised linear model remains highly competitive in this small macroeconomic dataset.
 
@@ -92,7 +92,13 @@ Model interpretation focuses on the final M3 information set.
 - SHAP values are used to examine the contribution of individual predictors to Gradient Boosting forecasts.
 - Standardised Ridge coefficients are used to examine the direction and relative magnitude of relationships in the best-performing linear model.
 
-[Final interpretation results to be added.]
+The three approaches highlight a broadly consistent group of informative predictors. Services activity, the OECD Composite Leading Indicator, retail sales, consumer confidence and monthly GDP appear prominently across the models.
+
+Ridge places the greatest weight on services activity, while the OECD CLI and construction also show relatively stable positive relationships with predicted GDP growth. Random Forest relies most heavily on the OECD CLI, consumer confidence, services activity and monthly GDP.
+
+SHAP analysis of Gradient Boosting identifies retail sales, consumer confidence, the OECD CLI and services activity as the strongest contributors to out-of-sample forecasts. Their effects are nonlinear and concentrated in particular forecasting periods, while inflation, vacancies and Bank Rate make relatively small contributions to the Gradient Boosting predictions.
+
+Overall, the interpretation results suggest that real-activity, sentiment and leading indicators contain the most useful information for the M3 GDP nowcasts, although their relative importance varies across model specifications.
 
 ## Consumer Confidence Data
 
