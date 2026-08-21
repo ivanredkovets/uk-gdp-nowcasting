@@ -77,12 +77,20 @@ The evaluation also compares performance during the COVID-19 period with the rem
 Ridge M3 achieves the strongest overall performance by RMSE, with an RMSE of **3.929** and an out-of-sample R² of **71.6%** relative to the Naive benchmark.
 
 Gradient Boosting M3 achieves an RMSE of **4.266**, while Random Forest M3 records the lowest MAE of **1.556**.
+![Actual and predicted UK GDP growth](figures/actual_vs_predicted_gdp.png)
 
 Forecast performance improves from M1 to M3 across all three model families, providing consistent evidence that additional within-quarter information improves GDP nowcasts. The gains are particularly large for Random Forest and Gradient Boosting.
+![Forecast accuracy across information sets](figures/rmse_by_information_set.png)
 
 The results therefore provide evidence that richer within-quarter information improves GDP nowcasts. However, the machine-learning models do not consistently outperform Ridge regression, suggesting that a relatively simple regularised linear model remains highly competitive in this small macroeconomic dataset.
 
 Forecast errors are strongly concentrated around the COVID-19 shock. Outside the pandemic period, forecast errors are substantially smaller across all models.
+
+## Policy Relevance
+
+Timely estimates of economic activity are important for institutions such as the Bank of England and HM Treasury because official quarterly GDP estimates are released with a delay. Nowcasting can provide policymakers with an earlier indication of current economic conditions and allow forecasts to be updated as new information arrives.
+
+The M1–M3 results demonstrate this trade-off between timeliness and accuracy: early-quarter information can provide an initial signal, while forecast accuracy improves as additional indicators become available later in the quarter. This highlights how real-time data flows can support progressively better-informed monetary and fiscal policy assessment before official GDP releases.
 
 ## Model Interpretation
 
@@ -97,6 +105,7 @@ The three approaches highlight a broadly consistent group of informative predict
 Ridge places the greatest weight on services activity, while the OECD CLI and construction also show relatively stable positive relationships with predicted GDP growth. Random Forest relies most heavily on the OECD CLI, consumer confidence, services activity and monthly GDP.
 
 SHAP analysis of Gradient Boosting identifies retail sales, consumer confidence, the OECD CLI and services activity as the strongest contributors to out-of-sample forecasts. Their effects are nonlinear and concentrated in particular forecasting periods, while inflation, vacancies and Bank Rate make relatively small contributions to the Gradient Boosting predictions.
+![Gradient Boosting SHAP summary](figures/gb_m3_shap_beeswarm.png)
 
 Overall, the interpretation results suggest that real-activity, sentiment and leading indicators contain the most useful information for the M3 GDP nowcasts, although their relative importance varies across model specifications.
 
