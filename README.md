@@ -74,9 +74,9 @@ The evaluation also compares performance during the COVID-19 period with the rem
 
 ## Key Results
 
-Ridge M3 achieves the strongest overall performance by RMSE, with an RMSE of **3.929** and an out-of-sample R² of **71.6%** relative to the Naive benchmark.
+Ridge M3 achieves the strongest overall performance by RMSE, with an RMSE of **3.860** and an out-of-sample R² of **72.6%** relative to the Naive benchmark.
 
-Gradient Boosting M3 achieves an RMSE of **4.266**, while Random Forest M3 records the lowest MAE of **1.556**.
+Gradient Boosting M3 achieves an RMSE of **4.266**, while Random Forest M3 records the lowest MAE of **1.550**.
 ![Actual and predicted UK GDP growth](figures/actual_vs_predicted_gdp.png)
 
 Forecast performance improves from M1 to M3 across all three model families, providing consistent evidence that additional within-quarter information improves GDP nowcasts. The gains are particularly large for Random Forest and Gradient Boosting.
